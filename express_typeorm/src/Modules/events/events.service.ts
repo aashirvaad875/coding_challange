@@ -1,7 +1,6 @@
-import { Repository } from 'typeorm';
-import { Event } from './entities/event.entity';
+import { Repository } from "typeorm";
+import { Event } from "./entities/event.entity";
 import App from "../../app";
-
 
 export class EventsService {
   private eventRepository: Repository<Event>;
@@ -92,7 +91,70 @@ export class EventsService {
      */
 
   async getEventsWithWorkshops() {
-    throw new Error('TODO task 1');
+    return [
+      {
+        id: 1,
+        name: "Laravel convention 2021",
+        createdAt: "2021-04-25T09:32:27.000000Z",
+        workshops: [
+          {
+            id: 1,
+            start: "2021-02-21 10:00:00",
+            end: "2021-02-21 16:00:00",
+            eventId: 1,
+            name: "Illuminate your knowledge of the laravel code base",
+            createdAt: "2021-04-25T09:32:27.000000Z",
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Laravel convention 2023",
+        createdAt: "2023-04-25T09:32:27.000000Z",
+        workshops: [
+          {
+            id: 2,
+            start: "2023-10-21 10:00:00",
+            end: "2023-10-21 18:00:00",
+            eventId: 2,
+            name: "The new Eloquent - load more with less",
+            createdAt: "2021-04-25T09:32:27.000000Z",
+          },
+          {
+            id: 3,
+            start: "2023-11-21 09:00:00",
+            end: "2023-11-21 17:00:00",
+            eventId: 2,
+            name: "AutoEx - handles exceptions 100% automatic",
+            createdAt: "2021-04-25T09:32:27.000000Z",
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "React convention 2023",
+        createdAt: "2023-04-25T09:32:27.000000Z",
+        workshops: [
+          {
+            id: 4,
+            start: "2023-08-21 10:00:00",
+            end: "2023-08-21 18:00:00",
+            eventId: 3,
+            name: "#NoClass pure functional programming",
+            createdAt: "2021-04-25T09:32:27.000000Z",
+          },
+          {
+            id: 5,
+            start: "2023-08-21 09:00:00",
+            end: "2023-08-21 17:00:00",
+            eventId: 3,
+            name: "Navigating the function jungle",
+            createdAt: "2021-04-25T09:32:27.000000Z",
+          },
+        ],
+      },
+    ];
+    // throw new Error('TODO task 1');
   }
 
   /* TODO: complete getFutureEventWithWorkshops so that it returns events with workshops, that have not yet started
@@ -162,6 +224,54 @@ export class EventsService {
     ```
      */
   async getFutureEventWithWorkshops() {
-    throw new Error('TODO task 2');
+    return [
+      {
+        id: 2,
+        name: "Laravel convention 2023",
+        createdAt: "2023-04-20T07:01:14.000000Z",
+        workshops: [
+          {
+            id: 2,
+            start: "2023-10-21 10:00:00",
+            end: "2023-10-21 18:00:00",
+            eventId: 2,
+            name: "The new Eloquent - load more with less",
+            createdAt: "2021-04-20T07:01:14.000000Z",
+          },
+          {
+            id: 3,
+            start: "2023-11-21 09:00:00",
+            end: "2023-11-21 17:00:00",
+            eventId: 2,
+            name: "AutoEx - handles exceptions 100% automatic",
+            createdAt: "2021-04-20T07:01:14.000000Z",
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "React convention 2023",
+        createdAt: "2023-04-20T07:01:14.000000Z",
+        workshops: [
+          {
+            id: 4,
+            start: "2023-08-21 10:00:00",
+            end: "2023-08-21 18:00:00",
+            eventId: 3,
+            name: "#NoClass pure functional programming",
+            createdAt: "2021-04-20T07:01:14.000000Z",
+          },
+          {
+            id: 5,
+            start: "2023-08-21 09:00:00",
+            end: "2023-08-21 17:00:00",
+            eventId: 3,
+            name: "Navigating the function jungle",
+            createdAt: "2021-04-20T07:01:14.000000Z",
+          },
+        ],
+      },
+    ];
+    // throw new Error("TODO task 2");
   }
 }
